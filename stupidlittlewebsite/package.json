@@ -1,0 +1,28 @@
+{
+  "name": "stupid-little-website",
+  "version": "1.0.0",
+  "description": "A demo site for npm scripting adventures.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-dev": "node index.js 5678",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farooqam/ps-npm-as-build-tool.git"
+  },
+  "keywords": [
+    "npm",
+    "scripting"
+  ],
+  "author": "Farooq Mahmud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/farooqam/ps-npm-as-build-tool/issues"
+  },
+  "homepage": "https://github.com/farooqam/ps-npm-as-build-tool#readme",
+  "dependencies": {
+    "koa": "^2.5.3"
+  }
+}
