@@ -6,9 +6,14 @@
   "scripts": {
     "start": "node index.js",
     "start-dev": "node index.js 5678",
-    "pretest": "echo \"Running tests...\"",
+    "pretest": "npm run lint",
     "test": "mocha test -u bdd -R spec --exit",
-    "posttest": "echo \"Finished running tests.\""
+    "posttest": "echo \"Finished running tests.\"",
+    "lint": "jshint ."
+  },
+  "jshintConfig": {
+    "esnext": true,
+    "noyield": true
   },
   "repository": {
     "type": "git",
@@ -28,6 +33,7 @@
     "koa": "^2.5.3"
   },
   "devDependencies": {
+    "jshint": "^2.9.6",
     "mocha": "^5.2.0",
     "should": "^13.2.3",
     "supertest": "^3.3.0"
