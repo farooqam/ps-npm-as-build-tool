@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "start-dev": "node index.js 5678",
-    "test": "mocha test -u bdd -R spec"
+    "pretest": "echo \"Running tests...\"",
+    "test": "mocha test -u bdd -R spec --exit",
+    "posttest": "echo \"Finished running tests.\""
   },
   "repository": {
     "type": "git",
