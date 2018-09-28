@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "start-dev": "node index.js 5678",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test -u bdd -R spec"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,10 @@
   "homepage": "https://github.com/farooqam/ps-npm-as-build-tool#readme",
   "dependencies": {
     "koa": "^2.5.3"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.3",
+    "supertest": "^3.3.0"
   }
 }
