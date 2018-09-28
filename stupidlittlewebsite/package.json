@@ -10,7 +10,8 @@
     "test": "mocha test -u bdd -R spec --exit",
     "posttest": "echo \"Finished running tests.\"",
     "lint": "jshint .",
-    "compile-coffee": "coffee --compile --output ./lib ./src/coffeescripts"
+    "compile-coffee": "coffee --compile --output ./lib ./src/coffeescripts",
+    "compile-ts": "tsc"
   },
   "jshintConfig": {
     "esnext": true,
@@ -38,6 +39,7 @@
     "jshint": "^2.9.6",
     "mocha": "^5.2.0",
     "should": "^13.2.3",
-    "supertest": "^3.3.0"
+    "supertest": "^3.3.0",
+    "typescript": "^3.1.1"
   }
 }
