@@ -15,8 +15,11 @@
     "compile-coffee": "npm install && coffee --compile --output ./lib ./src/coffeescripts",
     "compile-ts": "npm install && tsc",
     "clean": "rimraf lib/*",
-    "build-less": "rimraf public/css/* && lessc app/less/demo.less public/css/site.css",
-    "build-bundle": "rimraf public/js/* && browserify ./app/js/app.js | uglifyjs -mc > ./public/js/bundle.js"
+    "build-less": "lessc app/less/demo.less public/css/site.css",
+    "build-bundle": "browserify ./app/js/app.js | uglifyjs -mc > ./public/js/bundle.js",
+    "build-clean": "rimraf public/css/*, public/js/*",
+    "prebuild":"npm run build-clean",
+    "build": "npm run build-less && npm run build-bundle"
   },
   "jshintConfig": {
     "esnext": true,
