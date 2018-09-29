@@ -14,7 +14,8 @@
     "compile": "npm run compile-coffee && npm run compile-ts",
     "compile-coffee": "npm install && coffee --compile --output ./lib ./src/coffeescripts",
     "compile-ts": "npm install && tsc",
-    "clean": "rimraf lib/*"
+    "clean": "rimraf lib/*",
+    "build-less": "lessc app/less/demo.less css/site.css"
   },
   "jshintConfig": {
     "esnext": true,
@@ -40,6 +41,7 @@
   "devDependencies": {
     "coffee-script": "^1.12.7",
     "jshint": "^2.9.6",
+    "less": "^3.8.1",
     "mocha": "^5.2.0",
     "rimraf": "^2.6.2",
     "should": "^13.2.3",
