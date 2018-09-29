@@ -15,7 +15,8 @@
     "compile-coffee": "npm install && coffee --compile --output ./lib ./src/coffeescripts",
     "compile-ts": "npm install && tsc",
     "clean": "rimraf lib/*",
-    "build-less": "lessc app/less/demo.less css/site.css"
+    "build-less": "rimraf public/css/* && lessc app/less/demo.less public/css/site.css",
+    "build-bundle": "rimraf public/js/* && browserify ./app/js/app.js -o ./public/js/bundle.js"
   },
   "jshintConfig": {
     "esnext": true,
@@ -39,6 +40,7 @@
     "koa": "^2.5.3"
   },
   "devDependencies": {
+    "browserify": "^16.2.3",
     "coffee-script": "^1.12.7",
     "jshint": "^2.9.6",
     "less": "^3.8.1",
