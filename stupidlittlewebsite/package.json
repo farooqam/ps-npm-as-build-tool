@@ -10,9 +10,11 @@
     "test": "mocha test -u bdd -R spec --exit",
     "posttest": "echo \"Finished running tests.\"",
     "lint": "jshint .",
+    "precompile": "npm run clean",
+    "compile": "npm run compile-coffee && npm run compile-ts",
     "compile-coffee": "npm install && coffee --compile --output ./lib ./src/coffeescripts",
     "compile-ts": "npm install && tsc",
-    "compile-all": "npm run compile-coffee && npm run compile-ts"
+    "clean": "rimraf lib/*"
   },
   "jshintConfig": {
     "esnext": true,
@@ -39,6 +41,7 @@
     "coffee-script": "^1.12.7",
     "jshint": "^2.9.6",
     "mocha": "^5.2.0",
+    "rimraf": "^2.6.2",
     "should": "^13.2.3",
     "supertest": "^3.3.0",
     "typescript": "^3.1.1"
