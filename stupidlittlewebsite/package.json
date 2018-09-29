@@ -16,7 +16,7 @@
     "compile-ts": "npm install && tsc",
     "clean": "rimraf lib/*",
     "build-less": "rimraf public/css/* && lessc app/less/demo.less public/css/site.css",
-    "build-bundle": "rimraf public/js/* && browserify ./app/js/app.js -o ./public/js/bundle.js"
+    "build-bundle": "rimraf public/js/* && browserify ./app/js/app.js | uglifyjs -mc > ./public/js/bundle.js"
   },
   "jshintConfig": {
     "esnext": true,
@@ -48,6 +48,7 @@
     "rimraf": "^2.6.2",
     "should": "^13.2.3",
     "supertest": "^3.3.0",
-    "typescript": "^3.1.1"
+    "typescript": "^3.1.1",
+    "uglify-js": "^3.4.9"
   }
 }
