@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start-dev": "node index.js 5678",
-    "pretest": "npm run lint",
+    "start-dev": "npm install && npm test && node index.js 5678",
+    "pretest": "npm install && npm run lint",
     "test": "mocha test -u bdd -R spec --exit",
     "posttest": "echo \"Finished running tests.\"",
     "lint": "jshint .",
-    "compile-coffee": "coffee --compile --output ./lib ./src/coffeescripts",
-    "compile-ts": "tsc"
+    "compile-coffee": "npm install && coffee --compile --output ./lib ./src/coffeescripts",
+    "compile-ts": "npm install && tsc"
   },
   "jshintConfig": {
     "esnext": true,
