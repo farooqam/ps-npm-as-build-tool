@@ -11,7 +11,8 @@
     "posttest": "echo \"Finished running tests.\"",
     "lint": "jshint .",
     "compile-coffee": "npm install && coffee --compile --output ./lib ./src/coffeescripts",
-    "compile-ts": "npm install && tsc"
+    "compile-ts": "npm install && tsc",
+    "compile-all": "npm run compile-coffee && npm run compile-ts"
   },
   "jshintConfig": {
     "esnext": true,
